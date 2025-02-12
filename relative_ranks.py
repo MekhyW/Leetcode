@@ -1,5 +1,5 @@
 class Solution:
-    def findRelativeRanks(self, score: List[int]) -> List[str]:
+    def findRelativeRanks(self, score):
         sorted_score = sorted(score, reverse=True)
         ranks = ["Gold Medal", "Silver Medal", "Bronze Medal"]
         for player in score:
