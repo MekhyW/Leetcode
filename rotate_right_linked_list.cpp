@@ -14,15 +14,14 @@ public:
         if(head==nullptr){return head;}
         vector<ListNode*> nodes;
         ListNode* current = head;
-        while(current->next != nullptr){
+        while(current != nullptr){
             nodes.push_back(current);
             current = current->next;
         }
-        current->next = nodes[0];
-        nodes.push_back(current);
         k = k % nodes.size();
         if(k==0){return head;}
         nodes[nodes.size()-k-1]->next = nullptr;
+        nodes[nodes.size()-1]->next = nodes[0];
         return nodes[nodes.size()-k];
     }
 };
