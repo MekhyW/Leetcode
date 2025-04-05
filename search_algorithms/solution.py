@@ -119,7 +119,7 @@ def graph_depth_first_iterative(node: GraphNode) -> None:
             continue
         visited.add(current.value)
         print(current.value, end=" ")
-        for adjacent in reversed(current.adjacent):
+        for adjacent in current.adjacent:
             if adjacent.value not in visited:
                 stack.append(adjacent)
 
