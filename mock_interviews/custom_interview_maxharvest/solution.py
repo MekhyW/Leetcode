@@ -3,7 +3,7 @@ from typing import List
 def max_harvest_with_turns(grid: List[List[int]], K: int) -> int:
     N, M = len(grid), len(grid[0])
     max_productivity = 0
-    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # up, down, left, right
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # left, up, down, right
 
     def is_border(i, j):
         return i == 0 or i == N - 1 or j == 0 or j == M - 1
